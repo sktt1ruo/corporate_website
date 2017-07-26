@@ -1,0 +1,60 @@
+.navbar {
+    min-height: 135px;
+    /*display:inline-block*/
+}
+
+#bs-example-navbar-collapse-1 {
+    /*border: solid black 5px;*/
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.header {
+    text-align: center;
+}
+
+.thumbnail {
+    border: None;
+    /*text-align: center;*/
+}
+
+.footer {
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    font-size: large;
+}
+
+.footer_one {
+    word-spacing: 25px;
+}
+
+.footer a:link {
+    color: white;
+    cursor: auto;
+}
+
+.footer a:visited {
+    color: white;
+    cursor: auto;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p, h3{
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.container {
+    /*margin-top: 20px;*/
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}
