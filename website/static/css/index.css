@@ -1,15 +1,3 @@
-.navbar {
-    min-height: 135px;
-    /*display:inline-block*/
-}
-
-#bs-example-navbar-collapse-1 {
-    /*border: solid black 5px;*/
-    margin: auto;
-    margin-top: 40px;
-
-}
-
 .thumbnail {
     border: None;
     text-align: center;
@@ -25,29 +13,4 @@ h2 {
 
 .white {
     color: white;
-}
-
-.footer {
-    height: 80px;
-    background-color: black;
-    text-align: center;
-    font-size: large;
-}
-
-.footer_one {
-    word-spacing: 25px;
-}
-
-.footer a:link {
-    color: white;
-    cursor: auto;
-}
-
-.footer a:visited {
-    color: white;
-    cursor: auto;
-}
-
-a {
-    text-decoration: none !important;
 }

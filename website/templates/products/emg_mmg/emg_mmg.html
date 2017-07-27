@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Inertial Measurement Unit (IMU) Devices{% endblock %}
+
+{% block css_block %}<link rel="stylesheet" href="{% static 'css/products/products.css' %}">{% endblock %}
+
+{% block body_block %}
+
+<div class="container header">
+    <h2>Electromyography (EMG) / Mechanomyography (MMG) Measurement Units</h2>
+    <p>Our EMG / MMG sensors are the only devices on the market that deliver electromyography and mechanomyography data<br>
+        from the same unit. They are easy to use and cost-efficient.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a href="{% url 'products:emg_mmg_product' 1 %}">
+                    <img src="{% static 'images/products/emg_mmg/LpEmmgBlueBg.png' %}" alt="" style="width:90%">
+                    <div class="caption center-block">
+                        <h4>LPEMMG-B</h4>
+                        <ul>
+                            <li>Combined electromyography (EMG) / mechanomyogram (MMG) sensor</li>
+                            <li>Bluetooth 2 (wireless) connectivity</li>
+                            <li>Measures skeletal muscle and joint activity</li>
+                            <li>High sampling rates and excellent signal quality</li>
+                            <li>Software for data acquisition from multiple units</li>
+                            <li>Full integration with IMU systems</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

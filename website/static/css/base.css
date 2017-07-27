@@ -10,15 +10,6 @@
 
 }
 
-.header {
-    text-align: center;
-}
-
-.thumbnail {
-    border: None;
-    /*text-align: center;*/
-}
-
 .footer {
     height: 80px;
     background-color: black;
@@ -42,19 +33,4 @@
 
 a {
     text-decoration: none !important;
-}
-
-p, h3{
-    width: 800px;
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-.container {
-    /*margin-top: 20px;*/
-    margin-bottom: 25px;
-}
-
-.front {
-    margin-bottom: 0px;
 }

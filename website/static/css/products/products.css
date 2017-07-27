@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+}
+
+.thumbnail {
+    border: None;
+}
+
+p{
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}

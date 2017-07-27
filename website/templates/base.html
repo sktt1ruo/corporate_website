@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EMG / MMG Sensors - LP-RESEARCH</title>
+    <title>{% block title %}Default Title{% endblock %} - LP-RESEARCH</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,8 +17,7 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.js"
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
             crossorigin="anonymous"></script>
 
@@ -25,8 +25,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="../../static/css/imu.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
+    {% block css_block %}
+    {% endblock %}
 </head>
 <body>
 <div class="container front">
@@ -41,23 +43,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="../../static/images/LogoNeda.png"></a>
+                <a class="navbar-brand" href="{% url 'home:index' %}"><img src="{% static 'images/LogoNeda.png' %}"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="{% url 'home:index' %}">HOME</a></li>
 
                     <li class="dropdown">
                         <a href="imu.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true"
                            aria-expanded="false">PRODUCTS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="imu.html">IMU Sensors</a></li>
+                            <li><a href="{% url 'products:imu' %}">IMU Sensors</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="emg.html">EMG / MMG Sensors</a></li>
+                            <li><a href="{% url 'products:emg_mmg' %}">EMG / MMG Sensors</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="software.html">Software Kit</a></li>
                             <li role="separator" class="divider"></li>
@@ -109,7 +110,7 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="customers.html">Our Customers</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'company:contact' %}">Contact</a></li>
                         </ul>
                     </li>
 
@@ -125,43 +126,17 @@
     </nav>
 </div>
 
-<div class="container header">
-    <h2>Electromyography (EMG) / Mechanomyography (MMG) Measurement Units</h2>
-    <p>Our EMG / MMG sensors are the only devices on the market that deliver electromyography and mechanomyography data<br>
-        from the same unit. They are easy to use and cost-efficient.</p>
-</div>
+{% block body_block %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="2.html">
-                    <img src="../../static/images/LpEmmgBlueBg.png" alt="" style="width:90%">
-                    <div class="caption center-block">
-                        <h4>LPEMMG-B</h4>
-                        <ul>
-                            <li>Combined electromyography (EMG) / mechanomyogram (MMG) sensor</li>
-                            <li>Bluetooth 2 (wireless) connectivity</li>
-                            <li>Measures skeletal muscle and joint activity</li>
-                            <li>High sampling rates and excellent signal quality</li>
-                            <li>Software for data acquisition from multiple units</li>
-                            <li>Full integration with IMU systems</li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
+{% endblock %}
 
 <div class="container footer">
-    <p class="footer_one"><a href="index.html">Home</a>   <a href="imu.html">Products</a>   <a href="download.html">Support</a>   <a href="#">Order</a>   <a href="about.html">Company</a>   <a href="#">Blog</a>   <a href="#">Contact</a></p>
+    <p class="footer_one"><a href="{% url 'home:index' %}">Home</a> <a href="{% url 'products:imu' %}">Products</a> <a
+            href="download.html">Support</a>
+        <a href="#">Order</a> <a href="about.html">Company</a> <a href="#">Blog</a> <a
+                href="{% url 'company:contact' %}">Contact</a></p>
     <p>Copyright © 2017 <a href="index.html">LP-RESEARCH</a>. All rights reserved.</p>
 </div>
+
 </body>
 </html>
