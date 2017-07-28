@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'home:index' %}"><img src="{% static 'images/LogoNeda.png' %}"></a>
+                <a class="navbar-left" href="{% url 'home:index' %}"><img src="{% static 'images/LogoNeda.png' %}"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +52,7 @@
                     <li><a href="{% url 'home:index' %}">HOME</a></li>
 
                     <li class="dropdown">
-                        <a href="imu.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true"
                            aria-expanded="false">PRODUCTS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -60,9 +60,9 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'products:emg_mmg' %}">EMG / MMG Sensors</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="software.html">Software Kit</a></li>
+                            <li><a href="{% url 'products:software' %}">Software Kit</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="applications.html">References & Use Cases</a></li>
+                            <li><a href="{% url 'products:applications' %}">References & Use Cases</a></li>
                         </ul>
                     </li>
 
@@ -79,11 +79,11 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="download.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true"
                            aria-expanded="false">SUPPORT<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="download.html">Download</a></li>
+                            <li><a href="{% url 'support:downloads' %}">Download</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Knowledge Base</a></li>
                         </ul>
@@ -95,30 +95,30 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Online Shop</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="distributors.html">Distributors</a></li>
+                            <li><a href="{% url 'buy:distributors' %}">Distributors</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="{% url 'buy:terms_of_service' %}">Terms of Service</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true"
                            aria-expanded="false">COMPANY<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="{% url 'company:about_us' %}">About Us</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="customers.html">Our Customers</a></li>
+                            <li><a href="{% url 'company:customers' %}">Our Customers</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'company:contact' %}">Contact</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="#">BLOG</a></li>
+                    <li class='hidden-md hidden-sm'><a href="#">BLOG</a></li>
 
-                    <li><a href="#">中文</a></li>
+                    <li class='hidden-md hidden-sm'><a href="#">中文</a></li>
 
-                    <li><a href="#">ENGLISH</a></li>
+                    <li class='hidden-md hidden-sm'><a href="{% url 'home:index' %}">ENGLISH</a></li>
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -132,10 +132,10 @@
 
 <div class="container footer">
     <p class="footer_one"><a href="{% url 'home:index' %}">Home</a> <a href="{% url 'products:imu' %}">Products</a> <a
-            href="download.html">Support</a>
-        <a href="#">Order</a> <a href="about.html">Company</a> <a href="#">Blog</a> <a
+            href="{% url 'support:downloads' %}">Support</a>
+        <a href="#">Order</a> <a href="{% url 'company:about_us' %}">Company</a> <a href="#">Blog</a> <a
                 href="{% url 'company:contact' %}">Contact</a></p>
-    <p>Copyright © 2017 <a href="index.html">LP-RESEARCH</a>. All rights reserved.</p>
+    <p>Copyright © 2017 <a href="{% url 'home:index' %}">LP-RESEARCH</a>. All rights reserved.</p>
 </div>
 
 </body>
