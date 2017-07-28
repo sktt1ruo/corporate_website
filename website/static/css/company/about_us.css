@@ -1,0 +1,36 @@
+.header {
+    text-align: center;
+}
+
+.thumbnail {
+    border: None;
+    text-align: center;
+}
+
+p, h3 {
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    width: auto;
+    text-align: center;
+}
+
+.team {
+    margin-bottom: 20px;
+}
+
+.container {
+    /*margin-top: 20px;*/
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}

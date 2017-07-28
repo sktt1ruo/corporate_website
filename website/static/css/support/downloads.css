@@ -2,46 +2,6 @@
     text-align: center;
 }
 
-.thumbnail {
-    border: None;
-    text-align: center;
-}
-
-p, h3, h4, ul, ol {
-    width: 800px;
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-.table {
-    margin: auto;
-    width: 800px;
-}
-
-.container {
-    /*margin-top: 20px;*/
-    margin-bottom: 25px;
-}
-
-.front {
-    margin-bottom: 0px;
-}
-
-.front ul {
-    width: auto;
-}
-
-pre {
-    width: 800px;
-    margin: auto;
-}
-
-.thumbnail p {
-    width: auto;
-    border: None;
-    text-align: center;
-}
-
 .strike {
     display: block;
     text-align: center;
@@ -76,10 +36,6 @@ pre {
     margin-left: 15px;
 }
 
-.links {
-    text-align: center;
-}
-
 .android  > span:before {
     right: 55%;
     margin-right: 15px;
@@ -90,19 +46,25 @@ pre {
     margin-left: 15px;
 }
 
-.distributor h4, .distributor p{
-    text-align: left;
-}
-
-h3 {
+.links {
     text-align: center;
 }
 
-.team h4 {
-    width: auto;
-    text-align: center;
+p, h4 {
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
 }
 
-.team {
-    margin-bottom: 20px;
+.container {
+    /*margin-top: 20px;*/
+    margin-bottom: 25px;
+}
+.container {
+    /*margin-top: 20px;*/
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
 }

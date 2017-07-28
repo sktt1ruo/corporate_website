@@ -3,7 +3,7 @@
 
 {% load staticfiles %}
 
-{% block title %}Inertial Measurement Unit (IMU) Devices{% endblock %}
+{% block title %}LPEMMG-B – EMG / MMG Sensor with Bluetooth (Wireless) Connectivity{% endblock %}
 
 {% block css_block %}
 <link rel="stylesheet" href="{% static 'css/products/product.css' %}">{% endblock %}
@@ -14,7 +14,7 @@
 </div>
 
 <div class="container">
-    <img src="../../../static/images/home/LpEmmgBlueBg.png" alt="" style="width:50%" class="center-block">
+    <img src="{% static 'images/products/emg_mmg/LpEmmgBlueBg.png' %}" alt="" style="width:50%" class="center-block">
 </div>
 
 <div class="container">
@@ -153,8 +153,8 @@
                 1 x Warranty & support (1 year)<br>
             </td>
             <td>
-                <a href="#">Contact us</a><br>
-                <a href="../distributors.html">Find a distributor</a>
+                <a href="{% url 'company:contact' %}">Contact us</a><br>
+                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
             </td>
         </tr>
         <tr>
@@ -166,8 +166,8 @@
                 1 x Warranty and support (1 year)<br>
             </td>
             <td>
-                <a href="#">Contact us</a><br>
-                <a href="../distributors.html">Find a distributor</a>
+                <a href="{% url 'company:contact' %}">Contact us</a><br>
+                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
             </td>
         </tr>
         </tbody>
@@ -175,7 +175,7 @@
 </div>
 
 <div class="container">
-    <img src="../../../static/images/LpEmmgBottom.jpg" alt="" style="width:50%" class="center-block">
+    <img src="{% static 'images/products/emg_mmg/LpEmmgBottom.jpg' %}" alt="" style="width:50%" class="center-block">
 </div>
 
 {% endblock %}

@@ -10,6 +10,10 @@
 
 }
 
+.navbar-left {
+    margin-top: 15px;
+}
+
 .footer {
     height: 80px;
     background-color: black;

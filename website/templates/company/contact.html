@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
 {% block title %}Contact{% endblock %}
 
 {% block body_block %}
 <div class="container">
     <h1>Contact Us</h1>
-    <form method="post">
-        {{ contact_form.as_p }}
-        {% csrf_token %}
-        <input type="submit" class="btn btn-primary" value="SEND">
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <form method="post">
+                    {{ contact_form.as_p }}
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-primary" value="SEND">
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="thumbnail">
+                    <a href="#">
+                        <img src="{% static 'images/products/applications/AMZ_FSA.jpg' %}" alt="" style="width:90%">
+                        <div class="caption">
+                            <p>Drive Control and Analysis for ETH Zurich’s AMZ Student Racing Team</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 {% endblock %}

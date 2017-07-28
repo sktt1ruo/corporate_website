@@ -1,0 +1,26 @@
+.header {
+    text-align: center;
+}
+
+p {
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.thumbnail {
+    border: None;
+}
+
+.thumbnail p {
+    width: auto;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}

@@ -1,0 +1,26 @@
+.header {
+    text-align: center;
+}
+
+p, h3, h4, ul {
+    width: 800px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}
+
+.front ul {
+    width: auto;
+}
+
+pre {
+    width: 800px;
+    margin: auto;
+}

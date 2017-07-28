@@ -1,0 +1,15 @@
+.header {
+    text-align: center;
+}
+
+.thumbnail {
+    border: None;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}

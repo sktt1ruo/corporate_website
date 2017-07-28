@@ -3,9 +3,10 @@
 
 {% load staticfiles %}
 
-{% block title %}Inertial Measurement Unit (IMU) Devices{% endblock %}
+{% block title %}LPMS-B2: 9-Axis Inertial Measurement Unit (IMU) / AHRS with Bluetooth Classic and BLE Connectivity{% endblock %}
 
-{% block css_block %}<link rel="stylesheet" href="{% static 'css/products/product.css' %}">{% endblock %}
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/products/product.css' %}">{% endblock %}
 
 {% block body_block %}
 <div class="container header">
@@ -30,8 +31,11 @@
 
 <div class="container">
     <ul>
-        <li><a href="https://www.lp-research.com/site/wp-content/uploads/2016/05/LpmsB2Flyer20160524eng.pdf"><strong>Datasheet</strong></a></li>
-        <li><a href="https://www.lp-research.com/site/wp-content/uploads/2016/09/LpmsB2QuickStartGuide20160727.pdf"><strong>Quick Start Guide</strong></a></li>
+        <li><a href="https://www.lp-research.com/site/wp-content/uploads/2016/05/LpmsB2Flyer20160524eng.pdf"><strong>Datasheet</strong></a>
+        </li>
+        <li>
+            <a href="https://www.lp-research.com/site/wp-content/uploads/2016/09/LpmsB2QuickStartGuide20160727.pdf"><strong>Quick
+                Start Guide</strong></a></li>
     </ul>
 </div>
 
@@ -161,7 +165,7 @@
             </td>
             <td>
                 <a href="#">Order online</a><br>
-                <a href="../distributors.html">Find a distributor</a>
+                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
             </td>
         </tr>
         <tr>
@@ -174,7 +178,7 @@
             </td>
             <td>
                 <a href="#">Order online</a><br>
-                <a href="../distributors.html">Find a distributor</a>
+                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
             </td>
         </tr>
         </tbody>

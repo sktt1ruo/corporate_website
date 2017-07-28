@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}About Us{% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/company/about_us.css' %}">{% endblock %}
+
+{% block body_block %}
+<div class="container header">
+    <h2>About Us</h2>
+    <p>LP-RESEARCH Inc. is based in Tokyo, Japan and it specializes in the design and development of life science and
+        research equipment. We are a dedicated and highly trained team of engineers who put all their effort into
+        producing products with the highest quality standard. Our work doesn’t stop with the shipment of a product. We
+        take great pride in providing thorough support and specific customization to our customers.</p>
+</div>
+
+<div class="container">
+    <h3>The LP-RESEARCH Family</h3>
+    <div class="container">
+        <img src="{% static 'images/company/about_us/family.jpg' %}" alt="" style="width:60%" class="center-block">
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="team">Management Team</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/ZHUOHUA-LIN.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Zhuohua Lin (CFO)</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/KLAUS-PETERSEN.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Klaus Petersen (CEO)</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/HUEI-EE-YAP.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Huei Ee Yap (CTO)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <h3 class="team">Scientific Advisors</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/SALVATORE-SESSA.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Prof. Salvatore Sessa</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/MASSIMILIANO-ZECCA.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Prof. Massimiliano Zecca</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail team">
+                <img src="{% static 'images/company/about_us/ATSUO-TAKANISHI.jpg' %}" alt="" style="width:70%"
+                     class="img-circle">
+                <div class="caption">
+                    <h4>Prof. Atsuo Takanishi</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

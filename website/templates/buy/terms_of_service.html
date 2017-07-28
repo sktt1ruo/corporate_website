@@ -1,130 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Terms of Service - LP-RESEARCH</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% extends "base.html" %}
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+{% load staticfiles %}
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+{% block title %}Terms of Service{% endblock %}
 
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous"></script>
+{% block css_block %}<link rel="stylesheet" href="{% static 'css/buy/terms_of_service.css' %}">{% endblock %}
 
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="../../static/css/product.css">
-
-</head>
-<body>
-<div class="container front">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../home/index.html"><img src="../../static/images/LogoNeda.png"></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-                    <li><a href="../home/index.html">HOME</a></li>
-
-                    <li class="dropdown">
-                        <a href="imu/imu.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">PRODUCTS<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="imu/imu.html">IMU Sensors</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="emg_mmg/emg_mmg.html">EMG / MMG Sensors</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="software.html">Software Kit</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="applications.html">References & Use Cases</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">SOLUTIONS<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">VR Large Room-Scale Tracking</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Activity Recognition & Context Analysis</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Optical-Inertial Sensor Fusion</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="download.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">SUPPORT<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="download.html">Download</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Knowledge Base</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">BUY<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Online Shop</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="distributors.html">Distributors</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="terms.html">Terms of Service</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">COMPANY<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="customers.html">Our Customers</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">BLOG</a></li>
-
-                    <li><a href="#">中文</a></li>
-
-                    <li><a href="#">ENGLISH</a></li>
-
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div>
-    </nav>
-</div>
-
+{% block body_block %}
 <div class="container header">
     <h2>Terms of Service</h2>
 </div>
@@ -243,10 +126,4 @@
         Warranty and Return Policy shall be the law of Japan, and You hereby submit to the exclusive jurisdiction of the
         Tokyo District Court in Japan.</p>
 </div>
-
-<div class="container footer">
-    <p class="footer_one"><a href="../home/index.html">Home</a>   <a href="imu/imu.html">Products</a>   <a href="download.html">Support</a>   <a href="#">Order</a>   <a href="about.html">Company</a>   <a href="#">Blog</a>   <a href="#">Contact</a></p>
-    <p>Copyright © 2017 <a href="../home/index.html">LP-RESEARCH</a>. All rights reserved.</p>
-</div>
-</body>
-</html>
+{% endblock %}

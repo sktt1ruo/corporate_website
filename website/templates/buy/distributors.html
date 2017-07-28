@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Inertial Measurement Unit (IMU) Devices{% endblock %}
+
+{% block css_block %}<link rel="stylesheet" href="{% static 'css/buy/distributors.css' %}">{% endblock %}
+
+{% block body_block %}
+<div class="container header">
+    <h2>Local Distributors</h2>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail distributor">
+                <a href="#">
+                    <img src="{% static 'images/buy/distributors/zenshin-tech.png' %}" alt="" style="width:100%">
+                </a>
+                <div class="caption">
+                    <h4>Zenshin Technology Limited (Worldwide)</h4>
+                    <p>
+                        Last/RM A27<br>
+                        9/F Silvercorp International Tower<br>
+                        707-713 Nathan Rd., Mongkok, Kowloon<br>
+                        999077 Hong Kong<br>
+                        <br>
+                        Email: info@zenshin-tech.com<br>
+                        Web: <a href="zenshin-tech.com">zenshin-tech.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail distributor">
+                <a href="#">
+                    <img src="{% static 'images/buy/distributors/OMNI.png' %}" alt="" style="width:100%">
+                </a>
+                <div class="caption">
+                    <h4>Omni Instruments<br>(USA/Canada/UK/Europe)</h4>
+                    <p>
+                        East Kingsway Business Centre,<br>
+                        Mid Craigie Trading Estate,<br>
+                        Mid Craigie Rd, Dundee,<br>
+                        DD4 7RH, Scotland, UK<br>
+                        <br>
+                        Tel: +44 (0)845 9000 601<br>
+                        Fax: +44 (0)845 9000 602<br>
+                        Email: info@omni.uk.com<br>
+                        Web: <a href="www.omniinstruments.co.uk">www.omniinstruments.co.uk</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail distributor">
+                <a href="http://www.talisman-energy.com/">
+                    <img src="{% static 'images/buy/distributors/NEX-ONAR.png' %}" alt="" style="width:100%">
+                </a>
+                <div class="caption">
+                    <h4>Soft2tec GmbH (Germany/Europe)</h4>
+                    <p>
+                        Schäfergasse 4<br>
+                        D-65428 Rüsselsheim<br>
+                        <br>
+                        Tel: +49 6142 – 705 901 0<br>
+                        Fax: +49 6142 – 705 901 9<br>
+                        Email: sales@nexonar.com<br>
+                        Web: <a href="www.nexonar.com">www.nexonar.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

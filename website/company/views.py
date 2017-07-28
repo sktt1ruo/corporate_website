@@ -3,7 +3,11 @@ from company.forms import Contact_form
 
 
 # Create your views here.
+def about_us(request):
+    return render(request, 'company/about_us.html')
 
+def customers(request):
+    return render(request, 'company/customers.html')
 
 def contact(request):
     form = Contact_form()
