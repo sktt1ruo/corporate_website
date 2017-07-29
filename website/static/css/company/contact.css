@@ -1,0 +1,39 @@
+.header {
+    text-align: center;
+}
+
+p {
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.fieldWrapper {
+    margin-bottom: 10px;
+}
+
+#id_name {
+    width: 555px;
+    height: 45px;
+}
+
+#id_email {
+    width: 555px;
+    height: 45px;
+}
+
+#id_sensor {
+    width: 555px;
+    height: 45px;
+}
+#id_message {
+    width: 555px;
+    height: 250px;
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.front {
+    margin-bottom: 0px;
+}

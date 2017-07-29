@@ -5,31 +5,76 @@
 
 {% block title %}Contact{% endblock %}
 
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/company/contact.css' %}">{% endblock %}
+
 {% block body_block %}
-<div class="container">
-    <h1>Contact Us</h1>
+<div class="container header">
+    <h2>Contact Us</h2>
+</div>
+<div class="content container">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                <style>
+                    .messages {
+                        border: solid 5px red;
+                    }
+                </style>
+                {% endif %}
                 <form method="post">
-                    {{ contact_form.as_p }}
                     {% csrf_token %}
-                    <input type="submit" class="btn btn-primary" value="SEND">
+                    {{ contact_form.non_field_errors }}
+                    <div class="fieldWrapper">
+                        {{ contact_form.subject.errors }}
+                        <label for="{{ contact_form.name.id_for_label }}">Your Name (required):</label><br>
+                        {{ contact_form.name }}
+                    </div>
+                    <div class="fieldWrapper">
+                        {{ contact_form.subject.errors }}
+                        <label for="{{ contact_form.email.id_for_label }}">Your Email (required)</label><br>
+                        {{ contact_form.email }}
+                    </div>
+                    <div class="fieldWrapper">
+                        {{ contact_form.subject.errors }}
+                        <label for="{{ contact_form.sensor.id_for_label }}">Which sensor are you interested
+                            in?</label><br>
+                        {{ contact_form.sensor }}
+                    </div>
+                    <div class="fieldWrapper">
+                        {{ contact_form.subject.errors }}
+                        <label for="{{ contact_form.message.id_for_label }}">Your Message</label><br>
+                        {{ contact_form.message }}
+                    </div>
+                    <input type="submit" class="btn btn-primary" id="send" value="SEND">
                 </form>
             </div>
             <div class="col-sm-6">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="{% static 'images/products/applications/AMZ_FSA.jpg' %}" alt="" style="width:90%">
-                        <div class="caption">
-                            <p>Drive Control and Analysis for ETH Zurich’s AMZ Student Racing Team</p>
-                        </div>
-                    </a>
-                </div>
+                <p>
+                    <strong>LP-RESEARCH Inc. Japan Office</strong><br>
+                    株式会社・法人番号0111-01-062010<br>
+                    Address: #303 Y-Flat, 1-11-15, Nishiazabu,<br>
+                    Minato-ku, Tokyo, 106-0031 Japan<br>
+                    Tel: +81-3-6804-1610<br>
+                    Email: info at lp-research.com<br>
+                    <br>
+                    Follow LP-RESEARCH on Facebook and on Twitter.<br>
+                    <br>
+                    Website develop by Hao Meng<br>
+                    Logo design by #<br>
+                    Product photography by #<br>
+                </p>
+                <iframe width="555" height="460" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJAZtCloa0RIYRQbdvafpGkhE&key=AIzaSyCUKRhSs1kueOsi11WTf9Q6ZnpQ3kXu7wI"
+                        allowfullscreen></iframe>
             </div>
         </div>
     </div>
-
-
 </div>
 {% endblock %}

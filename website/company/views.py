@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from company.forms import Contact_form
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 # Create your views here.
@@ -17,8 +19,9 @@ def contact(request):
 
         if form.is_valid():
             form.save(commit=True)
-            # return index(request)
+            messages.success(request, 'Your message was sent successfully. Thanks.', fail_silently=True)
+            return HttpResponseRedirect('/company/contact/')
         else:
-            print("Error from invalid")
+            form = Contact_form()
 
     return render(request, 'company/contact.html', {'contact_form': form})
