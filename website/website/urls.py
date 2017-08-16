@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+
+from online_shop_carts.views import CartView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,4 +27,11 @@ urlpatterns = [
     url(r'^products/', include('products.urls')),
     url(r'^support/', include('support.urls')),
     url(r'^buy/', include('buy.urls')),
+    url(r"^online_shop_products/", include("online_shop_products.urls")),
+    url(r"^online_shop_categories/", include("online_shop_products.urls_categories")),
+
+    url(r"^cart/$", CartView.as_view(), name="cart"),
 ]
+
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

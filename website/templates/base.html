@@ -3,29 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Default Title{% endblock %} - LP-RESEARCH</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>{% block title %}Default Title{% endblock %} - DunAn</title>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous"></script>
-
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base2.css' %}">
 
     {% block css_block %}
     {% endblock %}
@@ -43,12 +28,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="{% url 'home:index' %}"><img src="{% static 'images/LogoNeda.png' %}"></a>
+                <a class="navbar-left" href="{% url 'home:index' %}"><img src="{% static 'images/Logo.png' %}" width="200px" height="50px"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="{% url 'home:index' %}">HOME</a></li>
 
                     <li class="dropdown">
@@ -56,9 +41,9 @@
                            aria-haspopup="true"
                            aria-expanded="false">PRODUCTS<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'products:imu' %}">IMU Sensors</a></li>
+                            <li><a href="{% url 'products:imu' %}">IMU</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{% url 'products:emg_mmg' %}">EMG / MMG Sensors</a></li>
+                            <li><a href="{% url 'products:vimu' %}">VIMU</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'products:software' %}">Software Kit</a></li>
                             <li role="separator" class="divider"></li>
@@ -66,17 +51,17 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">SOLUTIONS<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">VR Large Room-Scale Tracking</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Activity Recognition & Context Analysis</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Optical-Inertial Sensor Fusion</a></li>
-                        </ul>
-                    </li>
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+                           <!--aria-expanded="false">SOLUTIONS<span class="caret"></span></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li><a href="#">VR Large Room-Scale Tracking</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Activity Recognition & Context Analysis</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Optical-Inertial Sensor Fusion</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -84,8 +69,8 @@
                            aria-expanded="false">SUPPORT<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'support:downloads' %}">Download</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Knowledge Base</a></li>
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Knowledge Base</a></li>-->
                         </ul>
                     </li>
 
@@ -114,14 +99,14 @@
                         </ul>
                     </li>
 
-                    <li class='hidden-md hidden-sm'><a href="#">BLOG</a></li>
+                    <!--<li class='hidden-md hidden-sm'><a href="#">BLOG</a></li>-->
 
-                    <li class='hidden-md hidden-sm'><a href="#">中文</a></li>
+                    <!--<li class='hidden-md hidden-sm'><a href="#">中文</a></li>-->
 
-                    <li class='hidden-md hidden-sm'><a href="{% url 'home:index' %}">ENGLISH</a></li>
+                    <!--<li class='hidden-md hidden-sm'><a href="{% url 'home:index' %}">ENGLISH</a></li>-->
 
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div><!-- /.online_shop-collapse -->
         </div>
     </nav>
 </div>
@@ -133,9 +118,9 @@
 <div class="container footer">
     <p class="footer_one"><a href="{% url 'home:index' %}">Home</a> <a href="{% url 'products:imu' %}">Products</a> <a
             href="{% url 'support:downloads' %}">Support</a>
-        <a href="#">Order</a> <a href="{% url 'company:about_us' %}">Company</a> <a href="#">Blog</a> <a
+        <a href="#">Order</a> <a href="{% url 'company:about_us' %}">Company</a> <a
                 href="{% url 'company:contact' %}">Contact</a></p>
-    <p>Copyright © 2017 <a href="{% url 'home:index' %}">LP-RESEARCH</a>. All rights reserved.</p>
+    <p>Copyright © 2017 <a href="{% url 'home:index' %}">DunAn</a>. All rights reserved.</p>
 </div>
 
 </body>

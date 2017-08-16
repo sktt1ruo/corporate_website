@@ -3,7 +3,7 @@
 
 {% load staticfiles %}
 
-{% block title %}Welcome to the Home of LP-RESEARCH{% endblock %}
+{% block title %}Welcome to the Home of DunAn{% endblock %}
 
 {% block css_block %}
 <link rel="stylesheet" href="{% static 'css/home/index.css' %}">{% endblock %}
@@ -94,92 +94,21 @@
         <div class="col-sm-6">
             <div class="thumbnail">
                 <a href="{% url 'products:imu_product' 1 %}">
-                    <img src="{% static 'images/home/LpmsB2OnFinger.jpg' %}" alt="" style="width:90%">
+                    <img src="{% static 'images/home/imu_1.png' %}" alt="" style="width:50%">
                     <div class="caption">
-                        <h3>LPMS-B2</h3>
-                        <p>9-Axis IMU / AHRS / Motion Sensor with Bluetooth (Classic and BLE) Connectivity</p>
+                        <h3>IMU</h3>
+                        <p>Inertial Measurement Unit</p>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LpmsME1OnHand.jpg' %}" alt="" style="width:90%">
+                <a href="{% url 'products:vimu_product' 1 %}">
+                    <img src="{% static 'images/home/vimu_1.png' %}" alt="" style="width:50%">
                     <div class="caption">
-                        <h3>LPMS-ME1</h3>
-                        <p>Maker edition 9-Axis IMU / AHRS / Motion Sensor</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LpmsCANAL2.jpg' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPMS-CANAL2</h3>
-                        <p>9-Axis IMU / AHRS / Motion Sensor with CAN Connectivity and Waterproof Housing</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LPMSRS232AL2.jpg' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPMS-RS232AL2</h3>
-                        <p>9-Axis IMU / AHRS / Motion Sensor with RS232 Connectivity and Waterproof Housing</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LPMSUSBAL2.jpg' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPMS-USBAL2</h3>
-                        <p>9-Axis IMU / AHRS / Motion Sensor with USB Connectivity and Rugged Housing</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LPMSCU2.jpg' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPMS-CU2</h3>
-                        <p>LPMS Wired Miniature Motion Sensor / IMU / AHRS with CAN Bus and USB</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="#">
-                    <img src="{% static 'images/home/LPMSURS2.jpg' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPMS-URS2</h3>
-                        <p>9-Axis IMU / AHRS / Motion Sensor with USB and RS232 Connectivity</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <a href="{% url 'products:emg_mmg_product' 1 %}">
-                    <img src="{% static 'images/home/LpEmmgBlueBg.png' %}" alt="" style="width:90%">
-                    <div class="caption">
-                        <h3>LPEMMG-B</h3>
-                        <p>Electromyography / Mechanomyogram Sensor Solution with Bluetooth Connectivity</p>
+                        <h3>VIMU</h3>
+                        <p>Vision - IMU</p>
                     </div>
                 </a>
             </div>
@@ -215,7 +144,7 @@
         </div>
         <div class="col-sm-4">
             <div class="thumbnail black">
-                <a href="/w3images/fjords.jpg">
+                <a href="#">
                     <img src="{% static 'images/home/store.svg' %}" alt="" style="width:20%">
                     <span class="glyphicons glyphicons-ok"></span>
                     <div class="caption">

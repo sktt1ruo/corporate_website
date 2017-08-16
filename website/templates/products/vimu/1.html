@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Vision - IMU (VIMU){% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/products/product.css' %}">{% endblock %}
+
+{% block body_block %}
+<div class="container header">
+    <h2>Vision - IMU (VIMU)</h2>
+</div>
+
+<div class="container">
+    <img src="{% static 'images/products/vimu/vimu_1.png' %}" alt="" style="width:25%" class="center-block">
+</div>
+
+<div class="container">
+    <h3>Description</h3>
+    <p>The advantageous VIMU sensor features a modular design including an imaging sensor, an image processor, an IMU
+        module, and industrial standard interfaces of high-speed USB 3.0 and CAN. The standalone VIMU sensor provides
+        onboard intelligent functions of image processing, depth estimation, motion estimation, and feature tracking.
+        With the onboard image processor, the smart sensor provides core processing functions required in industrial and
+        robot applications, and it is fully extendible with application-specific processing requirements.
+    </p>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Specifications</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>Imaging Sensor</td></tr>
+        <tr>
+            <td>Sensor Type</td>
+            <td>2/3-inch CMOS</td>
+        </tr>
+        <tr>
+            <td>Shutter Type</td>
+            <td>Global shutter</td>
+        </tr>
+        <tr>
+            <td>Pixel</td>
+            <td>5 MP</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>2448 (H) x 2048 (V)</td>
+        </tr>
+
+        <tr><td>Gyroscopes</td></tr>
+        <tr>
+            <td>Dynamic Range</td>
+            <td>±300°/s</td>
+        </tr>
+        <tr>
+            <td>In-Run Bias Stability</td>
+            <td>< 25 °/hr</td>
+        </tr>
+        <tr>
+            <td>SF Non-Linearity</td>
+            <td>±0.05%</td>
+        </tr>
+        <tr>
+            <td>Rate Noise Spectral Density</td>
+            <td>0.015°/s/√Hz</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>0.0125 °/s</td>
+        </tr>
+
+        <tr><td>Accelerometer</td></tr>
+        <tr>
+            <td>Dynamic Range</td>
+            <td>±4g</td>
+        </tr>
+        <tr>
+            <td>Noise Density</td>
+            <td>< 0.15 mg/√Hz</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>< 0.5 mg</td>
+        </tr>
+        <tr>
+            <td>SF Non-Linearity (±4g)</td>
+            <td>±0.5%</td>
+        </tr>
+
+        <tr><td>Magnetometer</td></tr>
+        <tr>
+            <td>Full-Scale Range</td>
+            <td>±8 Gauss</td>
+        </tr>
+        <tr>
+            <td>Noise Density</td>
+            <td>120 μGauss/√Hz</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>0.263 MilliGauss</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h3>Order</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>PRODUCT</th>
+            <th>PACKAGE CONTENTS</th>
+            <th>PRICE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Vision - IMU (VIMU)</td>
+            <td>
+                1 x Vision - IMU (VIMU)
+            </td>
+            <td>
+                <a href="{% url 'company:contact' %}">Contact us</a><br>
+                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+

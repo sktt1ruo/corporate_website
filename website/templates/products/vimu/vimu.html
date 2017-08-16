@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Vision - IMU (VIMU){% endblock %}
+
+{% block css_block %}<link rel="stylesheet" href="{% static 'css/products/products.css' %}">{% endblock %}
+
+{% block body_block %}
+
+<div class="container header">
+    <h2>Vision - IMU (VIMU)</h2>
+    <!--<p>Our EMG / MMG sensors are the only devices on the market that deliver electromyography and mechanomyography data<br>-->
+        <!--from the same unit. They are easy to use and cost-efficient.</p>-->
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a href="{% url 'products:vimu_product' 1 %}">
+                    <img src="{% static 'images/products/vimu/vimu_1.png' %}" alt="" style="width:60%">
+                    <div class="caption center-block">
+                        <h4>Vision - IMU (VIMU)</h4>
+                        <ul>
+                            <li>Image Processing: Shape, Line, and Corner Detection, Optical Flow</li>
+                            <li>Motion Analysis: Velocity Estimation of Moving Objects</li>
+                            <li>Motion Tracking: Trajectory Tracking</li>
+                            <li>Depth Estimation: Typical Working Range 0.1 m ~ 10 m</li>
+                            <li>Feature Tracking: Real-time Salient Feature Tracking (>15 FPS)</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

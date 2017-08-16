@@ -1,0 +1,25 @@
+{% extends "online_shop/base.html" %}
+
+{% load staticfiles %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/online_shop_products/product_detail.css' %}">
+{% endblock %}
+
+{% block head_title %}
+Product List
+{% endblock %}
+
+{% block content %}
+
+<h1>All Product <small><a href="{% url 'online_shop_categories:categories' %}">Categories</a></small></h1>
+
+    <div class="row">
+    {% for product in object_list %}
+    <div class="col-sm-4">
+        {% include "online_shop_products/product_thumbnail.html" with product=product price="True" %}
+    </div>
+    {% cycle "" "" "" "</div><div class='row'>" %}
+        {% endfor %}
+</div>
+{% endblock %}

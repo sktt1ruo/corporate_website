@@ -1,17 +1,18 @@
 .navbar {
-    min-height: 135px;
+    min-height: 100px;
     /*display:inline-block*/
 }
 
 #bs-example-navbar-collapse-1 {
     /*border: solid black 5px;*/
     margin: auto;
-    margin-top: 40px;
+    margin-top: 30px;
 
 }
 
 .navbar-left {
     margin-top: 15px;
+    /*color: red;*/
 }
 
 .footer {

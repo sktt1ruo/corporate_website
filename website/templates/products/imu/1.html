@@ -3,39 +3,33 @@
 
 {% load staticfiles %}
 
-{% block title %}LPMS-B2: 9-Axis Inertial Measurement Unit (IMU) / AHRS with Bluetooth Classic and BLE Connectivity{% endblock %}
+{% block title %}Inertial Measurement Unit (IMU){% endblock %}
 
 {% block css_block %}
 <link rel="stylesheet" href="{% static 'css/products/product.css' %}">{% endblock %}
 
 {% block body_block %}
 <div class="container header">
-    <h2>LPMS-B2: 9-Axis IMU / AHRS / Motion Sensor with Bluetooth 2.1 and 4.1 Connectivity</h2>
+    <h2>Inertial Measurement Unit (IMU)</h2>
 </div>
 
 <div class="container">
-    <img src="{% static 'images/products/imu/1/LPMSB2.jpg' %}" alt="" style="width:50%" class="center-block">
+    <img src="{% static 'images/products/imu/1/imu_2.png' %}" alt="" style="width:30%" class="center-block">
 </div>
 
 <div class="container">
     <h3>Description</h3>
-    <p>The LP-Research Motion Sensor Bluetooth version 2 (LPMS-B2) is a miniature wireless inertial measurement unit
-        (IMU) / attitude and heading reference system (AHRS). The unit is very versatile, performing accurate, high
-        speed orientation and relative displacement measurements. Through the use of three different MEMS sensors
-        (3-axis gyroscope, 3-axis accelerometer and 3-axis magnetometer) drift-free, high-speed orientation data around
-        all three axes is achieved. Additionally temperature and barometric pressure sensors allow accurate
-        determination of the unit’s altitude. The LPMS-B2 communicates with a host system via a Bluetooth Classic 2.1 or
-        Low Energy 4.1 connection. Multiple LPMS-B2 units can be used simultaneously with one host system (7 units
-        maximum on Windows/Android). The sensor is capable of data transmission rates of up to 400Hz.</p>
+    <p>The IMU products provide high-accuracy inertial measurement solutions to platform stabilization and pointing
+        systems, high performance industrial applications, Unmanned Aerial Vehicles (UAVs), and Vehicles applications.
+        The IMU integrates three-axis vibration-immunity gyroscopes, three-axis accelerometers, three-axis
+        magnetometers, and a pressure sensor. The onboard processing includes attitude and heading reference, inertial
+        navigation, Kalman and complementary filters, and dynamic compensation.</p>
 </div>
 
 <div class="container">
     <ul>
-        <li><a href="https://www.lp-research.com/site/wp-content/uploads/2016/05/LpmsB2Flyer20160524eng.pdf"><strong>Datasheet</strong></a>
-        </li>
         <li>
-            <a href="https://www.lp-research.com/site/wp-content/uploads/2016/09/LpmsB2QuickStartGuide20160727.pdf"><strong>Quick
-                Start Guide</strong></a></li>
+            <a href="{% static 'documents/32A01T_document.pdf' %}"><strong>Document</strong></a></li>
     </ul>
 </div>
 
@@ -44,101 +38,72 @@
         <thead>
         <tr>
             <th>Specifications</th>
-            <th></th>
         </tr>
         </thead>
         <tbody>
+
+        <tr><td>Gyroscopes</td></tr>
         <tr>
-            <td>Product type</td>
-            <td>LPMS-B2, LPMS-B2 OEM</td>
+            <td>Dynamic Range</td>
+            <td>±300 °/s</td>
         </tr>
         <tr>
-            <td>Size</td>
-            <td>LPMS-B2: 39 x 39 x 8 mm<br>
-                LPMS-B2 OEM: 16 x 31 x 4 mm
-            </td>
+            <td>In-Run Bias Stability</td>
+            <td>< 25 °/hr</td>
         </tr>
         <tr>
-            <td>Weight</td>
-            <td>Weight LPMS-B2: 12 g<br>
-                LPMS-B2 OEM: 2 g
-            </td>
+            <td>SF Non-Linearity</td>
+            <td>< 0.05%</td>
         </tr>
         <tr>
-            <td>Bluetooth</td>
-            <td>2.1 + EDR / Low Enery (LE) 4.1</td>
-        </tr>
-        <tr>
-            <td>Communication distance</td>
-            <td>< 20 m</td>
-        </tr>
-        <tr>
-            <td>Orientation range</td>
-            <td>360° about all axes</td>
+            <td>Rate Noise Spectral Density</td>
+            <td>0.015°/s/√Hz</td>
         </tr>
         <tr>
             <td>Resolution</td>
-            <td>< 0.01°</td>
+            <td>0.0125 °/s</td>
+        </tr>
+
+        <tr><td>Accelerometer</td></tr>
+        <tr>
+            <td>Dynamic Range</td>
+            <td>±4g</td>
+        </tr>
+        <tr>
+            <td>Noise Density</td>
+            <td>< 0.15 mg/√Hz</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>< 0.5 mg</td>
+        </tr>
+        <tr>
+            <td>SF Non-Linearity (±4g)</td>
+            <td>±0.5%</td>
+        </tr>
+
+        <tr><td>Magnetometer</td></tr>
+        <tr>
+            <td>Full-Scale Range</td>
+            <td>±8 Gauss</td>
+        </tr>
+        <tr>
+            <td>Noise Density</td>
+            <td>120 μGauss/√Hz</td>
+        </tr>
+
+        <tr><td>Pressure Sensor</td></tr>
+        <tr>
+            <td>Range</td>
+            <td>10 to 1200 mbar</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>0.042 mbar</td>
         </tr>
         <tr>
             <td>Accuracy</td>
-            <td>< 2° (dynamic) < 0.5° (static)</td>
-        </tr>
-        <tr>
-            <td>Accelerometer</td>
-            <td>3 axes, ±2 / ±4 / ±8 / ±16 g, 16 bit</td>
-        </tr>
-        <tr>
-            <td>Gyroscope</td>
-            <td>3 axes, ±125 / ±245 / ±500 / ±1000 / ±2000 °/s, 16 bit</td>
-        </tr>
-        <tr>
-            <td>Magnetometer</td>
-            <td>3 axes, ± 4 / ± 8 / ± 12 / ± 16 gauss, 16 bit</td>
-        </tr>
-        <tr>
-            <td>Pressure sensor</td>
-            <td>300 – 1100 hPa</td>
-        </tr>
-        <tr>
-            <td>Data output format</td>
-            <td>Raw data / Euler angle / Quaternion</td>
-        </tr>
-        <tr>
-            <td>Data transmission rate</td>
-            <td>up to 400Hz</td>
-        </tr>
-        <tr>
-            <td>Power consumption</td>
-            <td>110 mW @ 3.3 V</td>
-        </tr>
-        <tr>
-            <td>Power supply</td>
-            <td>
-                LPMS-B2: Lithium bat., >6h, (3.7V@230mAh)<br>
-                LPMS-B2 OEM: 3.3-5.5V DC
-            </td>
-        </tr>
-        <tr>
-            <td>Temperature range</td>
-            <td>
-                LPMS-B2: -20 to +60 °C<br>
-                LPMS-B2 OEM: -40 to +80 °C
-            </td>
-        </tr>
-        <tr>
-            <td>Connector</td>
-            <td>
-                LPMS-B2: Micro USB, Type B<br>
-                LPMS-B2 OEM: SM02B-SURS-TF
-            </td>
-        </tr>
-        <tr>
-            <td>Software</td>
-            <td>
-                C++ library for Windows, Java library for Android, LpmsControl software and Open <br>
-                Motion Analysis Toolkit OpenMAT) for Windows.
-            </td>
+            <td>±1.5 mbar</td>
         </tr>
         </tbody>
     </table>
@@ -156,25 +121,9 @@
         </thead>
         <tbody>
         <tr>
-            <td>LPMS-B2</td>
+            <td>Inertial Measurement Unit (IMU)</td>
             <td>
-                1 x LPMS-B2 sensor<br>
-                1 x Micro USB cable<br>
-                1 x User guide card<br>
-                1 x Warranty & support (1 year)<br>
-            </td>
-            <td>
-                <a href="#">Order online</a><br>
-                <a href="{% url 'buy:distributors' %}">Find a distributor</a>
-            </td>
-        </tr>
-        <tr>
-            <td>LPMS-B2 OEM</td>
-            <td>
-                1 x LPMS-B2 OEM<br>
-                1 x Micro USB cable<br>
-                1 x User guide card<br>
-                1 x Warranty and support (1 year)<br>
+                1 x Inertial Measurement Unit (IMU)
             </td>
             <td>
                 <a href="#">Order online</a><br>
@@ -186,6 +135,6 @@
 </div>
 
 <div class="container">
-    <img src="{% static 'images/products/imu/1/LpmsB2_Box.jpg' %}" alt="" style="width:50%" class="center-block">
+    <img src="{% static 'images/products/imu/1/imu_1.png' %}" alt="" style="width:25%" class="center-block">
 </div>
 {% endblock %}

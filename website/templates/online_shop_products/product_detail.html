@@ -1,0 +1,138 @@
+{% extends "online_shop/base.html" %}
+
+{% load staticfiles %}
+
+<style>
+    {% block style %}
+
+    .container-alert-flash {
+        position: absolute;
+        top: 10px;
+        z-index: 50000;
+        width: 100%;
+        right: 0%;
+        margin: 0px;
+
+    }
+
+    {% endblock %}
+</style>
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'css/online_shop_products/product_detail.css' %}">
+{% endblock %}
+
+
+<script>
+    {% block jquery %}
+
+    function setPrice() {
+        var price = $(".variation_select option:selected").attr("data-price");
+        var sale_price = $(".variation_select option:selected").attr("data-sale-price");
+        if (sale_price != "" && sale_price != "None" && sale_price != null) {
+            $("#price").html("<h3>" + sale_price + " <small class='og-price'>" + price + "</small></h3>");
+        } else {
+            $("#price").text(price);
+        }
+    }
+
+    setPrice()
+
+    $(".variation_select").change(function () {
+        setPrice()
+    })
+
+    $("#submit-btn").click(function (event) {
+        event.preventDefault();
+        var formData = $("#add-form").serialize();
+        console.log(formData);
+        $.ajax({
+            type: "GET",
+            url: "{% url 'cart' %}",
+            data: formData,
+            success: function (data) {
+                $("#jquery-message").text("Added " + data.item_added + " Deleted " + data.deleted);
+
+                var template = "<div class='container container-alert-flash'><div class='col-sm-3 col-sm-offset-8'><div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>{{ message }}</div></div></div>\n";
+                console.log(template);
+                $("body").append(template);
+            },
+            error: function (response, error) {
+                $("#add-form").submit();
+            },
+        })
+
+
+    })
+
+    {% endblock %}
+</script>
+
+
+{% block head_title %}
+Product Detail
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>{{ object.title }}</h2>
+            {% if object.get_image_url %}
+            <div>
+                <img class="img-responsive" src="{{ object.get_image_url }}">
+            </div>
+            {% endif %}
+            <p class="lead">
+                {{ object.description }}
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <form id="add-form" method="GET" action="{% url 'cart' %}">
+                <p id="jquery-message" class="lead"></p>
+            {% if object.variation_set.count > 1 %}
+            <h3 id="price">{{ object.variation_set.first.price }}</h3>
+            <select name="item" class="form-control variation_select">
+                {% for vari_obj in object.variation_set.all %}
+                <option data-sale-price="{{ vari_obj.sale_price }}" data-price="{{ vari_obj.price }}"
+                        value="{{ vari_obj.id }}">{{ vari_obj }}
+                </option>
+                {% endfor %}
+            </select>
+
+            {% else %}
+                 <input type="hidden" name="item" value="{{ object.variation_set.first.id }}">
+            <h3 id="price">
+                {% if object.variation_set.first.sale_price %}
+                {{ object.variation_set.first.sale_price }}
+                <small class="og-price">{{ object.variation_set.first.price }}</small>
+                {% else %}
+
+                {{ object.variation_set.first.price }}
+                {% endif %}
+            </h3>
+            {% endif %}
+                <br>
+                <input class="form-control" type="number" name="qty" value="1">
+            <br>
+            <input id="submit-btn" type="submit" value="Add to Cart" class="btn btn-default">
+            </form>
+            <br>
+            <hr>
+            <h4>Related Products</h4>
+            <div class="row">
+                {% for product in related %}
+                <div class="col-sm-6">
+                    {% include "online_shop_products/product_thumbnail.html" with product=product price="True" %}
+                </div>
+                {% cycle "" "</div><div class='row'>" %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

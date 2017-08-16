@@ -11,12 +11,12 @@ def imu_product(request, id):
     return render(request, page)
 
 
-def emg_mmg(request):
-    return render(request, 'products/emg_mmg/emg_mmg.html')
+def vimu(request):
+    return render(request, 'products/vimu/vimu.html')
 
 
-def emg_mmg_product(request, id):
-    page = 'products/emg_mmg/' + id + '.html'
+def vimu_product(request, id):
+    page = 'products/vimu/' + id + '.html'
     return render(request, page)
 
 
