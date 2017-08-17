@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="{% static 'css/base2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base4.css' %}">
 
     {% block css_block %}
     {% endblock %}
@@ -29,6 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-left" href="{% url 'home:index' %}"><img src="{% static 'images/Logo.png' %}" width="200px" height="50px"></a>
+                <a class="navbar-brand" href="{% url 'home:index' %}">Precision R&D</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
