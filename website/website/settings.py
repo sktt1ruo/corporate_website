@@ -27,7 +27,7 @@ SECRET_KEY = 'koemoy!+s^(0@!_txz==i@(6xp175zfrclb5ge9fvb5*@!==a_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["sktt1ruo.pythonanywhere.com"]
 
 # Application definition
 
