@@ -11,8 +11,9 @@ Product List
 {% endblock %}
 
 {% block content %}
-
-<h1>All Product <small><a href="{% url 'online_shop_categories:categories' %}">Categories</a></small></h1>
+<hr>
+<h1>All Products <small><a href='{% url "online_shop_categories:categories" %}'>Categories</a></small></h1>
+<p>Showing all {{ object_list.count }} results</p>
 
     <div class="row">
     {% for product in object_list %}

@@ -1,0 +1,55 @@
+.navbar {
+    min-height: 100px;
+    /*display:inline-block*/
+}
+
+#bs-example-navbar-collapse-1 {
+    /*border: solid black 5px;*/
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.navbar-left {
+    margin-top: 15px;
+    /*color: red;*/
+}
+
+.navbar-default .navbar-brand {
+    color: rgb(0,82,162);
+
+    font-family: Calibri;
+	font-size: 25px;
+	font-style: oblique;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 25px;
+
+    
+    margin-top: 28px;
+}
+
+.footer {
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    font-size: large;
+}
+
+.footer_one {
+    word-spacing: 25px;
+}
+
+.footer a:link {
+    color: white;
+    cursor: auto;
+}
+
+.footer a:visited {
+    color: white;
+    cursor: auto;
+}
+
+a {
+    text-decoration: none !important;
+}

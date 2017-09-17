@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from online_shop_carts.views import CartView
+# from online_shop_carts.views import CartView, ItemCountView, CheckoutView
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,10 +28,17 @@ urlpatterns = [
     url(r'^products/', include('products.urls')),
     url(r'^support/', include('support.urls')),
     url(r'^buy/', include('buy.urls')),
+
     url(r"^online_shop_products/", include("online_shop_products.urls")),
     url(r"^online_shop_categories/", include("online_shop_products.urls_categories")),
+    url(r"^online_shop_cart/", include("online_shop_carts.urls")),
+    url(r"^online_shop_orders/", include("online_shop_orders.urls")),
 
-    url(r"^cart/$", CartView.as_view(), name="cart"),
+    # url(r"^cart/$", CartView.as_view(), name="cart"),
+    # url(r"^cart/count/$", ItemCountView.as_view(), name="item_count"),
+    # url(r"^checkout/$", CheckoutView.as_view(), name="checkout"),
+
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
 ]
 
 if settings.DEBUG is True:

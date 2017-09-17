@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="{% static 'js/custom.js' %}"></script>
+
+
+    <script>
+        
+        function updateCartItemCount() {
+            var badge = $("#cart-count-badge");
+
+            $.ajax({
+                type: "GET",
+                url: "{% url 'online_shop_carts:item_count' %}",
+                success: function (data) {
+                    badge.text(data.count);
+                },
+                error: function (response, error) {
+                    console.log(response);
+                    console.log(error);
+                }
+            })
+        }
+        $(document).ready(function () {
+            updateCartItemCount()
+        })
+    </script>

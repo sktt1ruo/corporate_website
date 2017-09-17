@@ -27,7 +27,15 @@ SECRET_KEY = 'koemoy!+s^(0@!_txz==i@(6xp175zfrclb5ge9fvb5*@!==a_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["sktt1ruo.pythonanywhere.com"]
+ALLOWED_HOSTS = []# "sktt1ruo.pythonanywhere.com"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sktt1ruo@gmail.com'
+EMAIL_HOST_PASSWORD = 'di1changyu'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
 # Application definition
 
@@ -38,13 +46,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'company',
-    'products',
-    'support',
-    'buy',
-    'online_shop_products',
-    'online_shop_carts',
+
+    "crispy_forms",
+
+    "home",
+    "company",
+    "products",
+    "support",
+    "buy",
+
+    "online_shop_products",
+    "online_shop_carts",
+    "online_shop_orders",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +142,18 @@ STATICFILES_DIRS = [
 # MEDIA
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = "/media/"
+
+# Crispy FORM TAGs SETTINGS
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# DJANGO REGISTRATION REDUX SETTINGS
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+LOGIN_REDIRECT_URL = "/"
+
+# Braintree Payments Details
+BRAINTREE_PUBLIC = "mrf36x42v4zpt2zw"
+BRAINTREE_PRIVATE = "27dd2731bcab283eee2b3ecf4f611a5f"
+BRAINTREE_MERCHANT_ID = "ydr442kskchdz8w9"
+BRAINTREE_ENVIRONMENT = "Sandbox"
